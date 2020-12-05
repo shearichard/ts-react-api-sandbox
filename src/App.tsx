@@ -31,11 +31,29 @@ const AppBar: React.FC<BoxProps> = (props) => (
 
 function App() {
   return (
-    <Grommet theme={theme}>
+    <Grommet theme={theme} full>
+      <Box fill>
         <AppBar>
             <Heading level='3' margin='none'>Down to Zero</Heading>
             <Button icon={<Notification />} onClick={() => {}} />
         </AppBar>
+
+        <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
+          <Box flex align='center' justify='center'>
+            app body
+          </Box>
+
+          <Box
+            width='medium'
+            background='light-2'
+            elevation='small'
+            align='center'
+            justify='center'
+          >
+            sidebar
+          </Box>
+        </Box>
+      </Box>
     </Grommet>
   );
 }
