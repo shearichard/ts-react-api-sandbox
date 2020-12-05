@@ -3,6 +3,9 @@ import { Box, BoxProps, Grommet } from 'grommet';
 
 const theme = {
   global: {
+    colors: {
+        brand: '#556b2f',
+    },
     font: {
       family: 'Roboto',
       size: '18px',
