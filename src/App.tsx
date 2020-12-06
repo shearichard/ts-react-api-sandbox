@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, BoxProps, Button, Heading, Grommet } from 'grommet';
+import { Box, BoxProps, Button, FormField, Heading, Grommet, Select } from 'grommet';
 import { Notification } from 'grommet-icons';
 
 const theme = {
@@ -30,6 +30,7 @@ const AppBar: React.FC<BoxProps> = (props) => (
 );
 
 function App() {
+  const [value, setValue] = React.useState('medium');
   return (
     <Grommet theme={theme} full>
       <Box fill>
@@ -37,10 +38,16 @@ function App() {
             <Heading level='3' margin='none'>Down to Zero</Heading>
             <Button icon={<Notification />} onClick={() => {}} />
         </AppBar>
-
         <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
           <Box flex align='center' justify='center'>
-            app body
+            <Heading margin='large' level='3' >Select Test</Heading>
+            <FormField label="Size">
+                <Select
+                  options={['small', 'medium', 'large']}
+                  value={value}
+                  onChange={({ option }) => setValue(option)}
+                />
+            </FormField>
           </Box>
 
           <Box
