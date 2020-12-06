@@ -1,5 +1,14 @@
 import React from 'react';
-import { Box, BoxProps, Button, FormField, Heading, Grommet, Select } from 'grommet';
+import { Anchor,
+        Box, 
+        BoxProps, 
+        Button, 
+        FormField, 
+        Footer,
+        Heading, 
+        Grommet, 
+        Select,
+        Text } from 'grommet';
 import { Notification } from 'grommet-icons';
 
 const theme = {
@@ -35,7 +44,7 @@ function App() {
     <Grommet theme={theme} full>
       <Box fill>
         <AppBar>
-            <Heading level='3' margin='none'>Down to Zero</Heading>
+            <Heading level='3' margin='none'>Grommet / Typescript Experiments</Heading>
             <Button icon={<Notification />} onClick={() => {}} />
         </AppBar>
         <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
@@ -61,6 +70,10 @@ function App() {
             sidebar
           </Box>
         </Box>
+        <Footer background="brand" pad="medium">
+          <Text>&#169; 2020 Kubadev</Text>
+          <Anchor label="About" />
+        </Footer>
       </Box>
     </Grommet>
   );
