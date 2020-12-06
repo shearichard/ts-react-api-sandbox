@@ -40,7 +40,7 @@ function App() {
         </AppBar>
         <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
           <Box flex align='center' justify='center'>
-            <Heading margin='large' level='3' >Select Test</Heading>
+            <Heading margin='large' level='3' >Test of the Select component</Heading>
             <FormField label="Size">
                 <Select
                   options={['small', 'medium', 'large']}
@@ -48,6 +48,7 @@ function App() {
                   onChange={({ option }) => setValue(option)}
                 />
             </FormField>
+            <Heading margin='large' level='6' >{ value } has been chosen.</Heading>
           </Box>
 
           <Box
